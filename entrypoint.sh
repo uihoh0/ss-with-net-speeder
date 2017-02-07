@@ -12,8 +12,7 @@ else
     password=$MAIL_PASSWORD
     #jobs=$JOBS
 fi
-runs="
-nohup /usr/local/bin/net_speeder venet0 "ip" >/dev/null 2>&1 & /usr/local/bin/ssserver \"$@\" "
+runs="nohup /usr/local/bin/net_speeder venet0 "ip" >/dev/null 2>&1 & /usr/local/bin/ssserver \"$@\" "
 swakscmd="swaks --from $from --to $to --server $server -au $from -ap $password --body iamthe best --h-Subject 1"
 #swakscmd="swaks -4 --tls-optional --server $server --from $from --to $to"
 
