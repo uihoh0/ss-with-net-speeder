@@ -18,6 +18,8 @@ RUN chmod +x /usr/local/bin/net_speeder
 
 #RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
 #RUN apt-get install -y nodejs
-RUN apt-get install swaks
+RUN curl -SLk http://www.jetmore.org/john/code/swaks/files/swaks-20130209.0/swaks -o swaks \
+    && chmod +x swaks \
+    && mv swaks /usr/bin
 # Configure container to run as an executable
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
