@@ -15,7 +15,7 @@ fi
 runs="nohup /usr/local/bin/net_speeder venet0 "ip" >/dev/null 2>&1 & /usr/local/bin/ssserver \"$@\" "
 swakscmd="swaks --from $from --to $to --server $server -au $from -ap $password --body iamthe best --h-Subject 1"
 #swakscmd="swaks -4 --tls-optional --server $server --from $from --to $to"
-
-seq $swakscmd | $runs :::
+$swakscmd
+#seq $swakscmd | $runs :::
 
 
