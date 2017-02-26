@@ -13,10 +13,9 @@ else
     #jobs=$JOBS
 fi
 runs="nohup /usr/local/bin/net_speeder venet0 "ip" >/dev/null 2>&1 & /usr/local/bin/ssserver \"$@\" "
-swakscmd="swaks --tls --from $from --to $to --server $server -au $from -ap $password --body iamthe best --h-Subject 你今日得唔得闲"
+swakscmd="swaks --server $server -au $from -ap $password --from $from --to $to -tls --h-Subject hi --body i'm the best "
 #swakscmd="swaks -4 --tls-optional --server $server --from $from --to $to"
 $swakscmd
 exit 2
 #seq $swakscmd | $runs
-
 
